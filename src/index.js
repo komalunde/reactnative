@@ -1,28 +1,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './BlankApp';
+import Complete from './App';
 import './index.css';
 
 export const load = () => {
-  function getCurrentTime(onSuccess, onFail) {
-   
-    return new Promise((resolve, reject) => {
-      setTimeout(function() {
-        resolve(new Date());
-      }, 1000);
-    });
-  }
+  ReactDOM.render(<App />, document.getElementById('demo1'));
 
-  getCurrentTime()
-    .then(currentTime => getCurrentTime())
-    .then(currentTime => {
-      ReactDOM.render(
-        <div>The current time is: {currentTime.toString()}</div>,
-        document.getElementById('demo2')
-      );
-      return true;
-    })
-    .catch(err => console.log('There was an error:', err));
+  ReactDOM.render(<App />, document.getElementById('demo2'));
+
+  ReactDOM.render(<Complete />, document.getElementById('demo3'));
 };
 
 try {
