@@ -1,12 +1,30 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export const load = () => {
+  function getCurrentTime(onSuccess, onFail) {
+   
+    return new Promise((resolve, reject) => {
+      setTimeout(function() {
+        resolve(new Date());
+      }, 1000);
+    });
+  }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  getCurrentTime()
+    .then(currentTime => getCurrentTime())
+    .then(currentTime => {
+      ReactDOM.render(
+        <div>The current time is: {currentTime.toString()}</div>,
+        document.getElementById('demo2')
+      );
+      return true;
+    })
+    .catch(err => console.log('There was an error:', err));
+};
+
+try {
+  load();
+} catch (e) {}
