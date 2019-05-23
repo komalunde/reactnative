@@ -1,32 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.demo {
-  position: relative;
-}
-
-.demo .notificationsFrame {
+.notificationsFrame {
   z-index: 2;
   width: 100%;
   top: 20px;
   background: #fff;
   border-radius: 3px;
   overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
   font-family: 'Open Sans', Helvetica, sans-serif;
   margin-bottom: 40px;
 }
 
-.demo .notificationsFrame .searchInput {
+.notificationsFrame .searchInput {
   border: 10px solid red;
   box-sizing: border-box;
   position: absolute;
@@ -48,25 +32,24 @@ code {
   pointer-events: none
 }
 
-.demo .notificationsFrame .searchInput:focus {
+.notificationsFrame .searchInput:focus {
   outline: none;
 }
 
-.demo .notificationsFrame .searchInput.active {
+.notificationsFrame .searchInput.active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
   pointer-events: all;
 }
 
-.demo .notificationsFrame .header {
+.notificationsFrame .header {
   position: relative;
   height: 60px;
   background: #5F98CD;
-  padding-top: 0;
 }
 
-.demo .notificationsFrame .header .menuIcon {
+.notificationsFrame .header .menuIcon {
   position: absolute;
   width: 29px;
   height: 15px;
@@ -75,7 +58,7 @@ code {
   cursor: pointer;
 }
 
-.demo .notificationsFrame .header .menuIcon .dashTop {
+.notificationsFrame .header .menuIcon .dashTop {
   position: absolute;
   width: 20px;
   height: 3px;
@@ -87,7 +70,7 @@ code {
   transition: all .2s ease-in-out;
 }
 
-.demo .notificationsFrame .header .menuIcon .dashBottom {
+.notificationsFrame .header .menuIcon .dashBottom {
   position: absolute;
   width: 20px;
   height: 3px;
@@ -102,7 +85,7 @@ code {
   bottom: 0;
 }
 
-.demo .notificationsFrame .header .menuIcon .circle {
+.notificationsFrame .header .menuIcon .circle {
   position: absolute;
   height: 7px;
   width: 7px;
@@ -114,20 +97,20 @@ code {
   transition: all .2s ease-in-out;
 }
 
-.demo .notificationsFrame .header .menuIcon:hover .dashTop, .demo .notificationsFrame .header .menuIcon:hover .dashBottom, .demo .notificationsFrame .header .menuIcon:hover .circle {
+.notificationsFrame .header .menuIcon:hover .dashTop, .notificationsFrame .header .menuIcon:hover .dashBottom, .notificationsFrame .header .menuIcon:hover .circle {
   background: #fff;
 }
 
-.demo .notificationsFrame .header .title {
+.notificationsFrame .header .title {
   display: block;
   text-align: center;
+  line-height: 60px;
   color: #fff;
   font-weight: 600;
   font-size: 15px;
-  padding-top: 20px;
 }
 
-.demo .notificationsFrame .header .searchIcon {
+.notificationsFrame .header .searchIcon {
   position: absolute;
   z-index: 3;
   font-size: 21px;
@@ -139,17 +122,17 @@ code {
   cursor: pointer
 }
 
-.demo .notificationsFrame .header .searchIcon:hover {
+.notificationsFrame .header .searchIcon:hover {
   color: #fff;
 }
 
-.demo .notificationsFrame .content {
+.notificationsFrame .content {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
-.demo .notificationsFrame .content .line {
+.notificationsFrame .content .line {
   position: absolute;
   top: 0;
   left: 40px;
@@ -158,14 +141,14 @@ code {
   background: #EBEBEB;
 }
 
-.demo .notificationsFrame .content .item {
+.notificationsFrame .content .item {
   position: relative;
   z-index: 2;
   margin: 20px 30px 30px 70px;
   display: block;
 }
 
-.demo .notificationsFrame .content .item .circle {
+.notificationsFrame .content .item .circle {
   box-sizing: border-box;
   position: absolute;
   height: 11px;
@@ -178,7 +161,7 @@ code {
   left: -20px;
 }
 
-.demo .notificationsFrame .content .item .avatar {
+.notificationsFrame .content .item .avatar {
   position: absolute;
   height: 40px;
   width: 40px;
@@ -188,56 +171,54 @@ code {
   left: -49px;
 }
 
-.demo .notificationsFrame .content .item .avatar img {
+.notificationsFrame .content .item .avatar img {
   width: 100%;
   border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
 }
 
-.demo .notificationsFrame .content .item .time {
+.notificationsFrame .content .item .time {
   display: block;
   font-size: 11px;
   line-height: 11px;
   margin-bottom: 2px;
 }
 
-.demo .notificationsFrame .content .item p {
+.notificationsFrame .content .item p {
   font-size: 15px;
   line-height: 20px;
   margin: 0px 40px 0px 0px;
   font-family: 'Open Sans', Lora, Times, no-serif;
 }
 
-.demo .notificationsFrame .content .item p b {
+.notificationsFrame .content .item p b {
   font-weight: 600;
 }
 
-.demo .notificationsFrame .content .item .right {
+.notificationsFrame .content .item .right {
   position: absolute;
   right: 5px;
   font-size: 11px;
   top: 11px;
 }
 
-.demo .notificationsFrame .content .item .commentCount {
+.notificationsFrame .content .item .commentCount {
   position: absolute;
   right: 15px;
   font-size: 12px;
   top: 11px
   /*border-radius: 50%;
-          border: 5px solid #ecf0f1;
-          box-sizing: border-box;
-          position: absolute;
-          height: 20px;
-          width: 20px;
-          background: #fff;
-          border: 2px solid #5F98CD;
-          box-shadow: 0 0 0 3px #fff;*/
+        border: 5px solid #ecf0f1;
+        box-sizing: border-box;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: #fff;
+        border: 2px solid #5F98CD;
+        box-shadow: 0 0 0 3px #fff;*/
 }
 
-.demo .notificationsFrame .content .item .commentCount:after {
+.notificationsFrame .content .item .commentCount:after {
   content: "\f075";
   font-family: FontAwesome;
   position: absolute;
@@ -249,16 +230,16 @@ code {
   z-index: 3;
 }
 
-.demo .notificationsFrame .content .item .commentCount:hover:after {
+.notificationsFrame .content .item .commentCount:hover:after {
   color: lightblue;
 }
 
-.demo .notificationsFrame .content .item:hover {
+.notificationsFrame .content .item:hover {
   color: #5F98CD;
   cursor: pointer;
 }
 
-.demo .notificationsFrame .footer {
+.notificationsFrame .footer {
   position: relative;
   background: #FFFFFF;
   margin: auto;
@@ -268,7 +249,7 @@ code {
   border-radius: 10px;
 }
 
-.demo .notificationsFrame .footer button {
+.notificationsFrame .footer button {
   background: #eee;
   position: absolute;
   width: 100%;
@@ -279,15 +260,20 @@ code {
   border: 0;
 }
 
-.demo .notificationsFrame .footer button i {
+.notificationsFrame .footer button i {
   margin: 0 10px;
 }
 
-.demo .notificationsFrame.show-menu {
+.notificationsFrame.show-menu {
   -webkit-transform: translate3d(150px,0,0);
           transform: translate3d(150px,0,0);
 }
 
 .demo {
   margin: 20px 0;
+}
+
+iframe {
+  border: 1px solid #999;
+  width: 100%;
 }
