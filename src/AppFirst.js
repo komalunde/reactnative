@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 
-import Home from './views/Home/Home';
+import Home from './views/Home/HomeFirst';
 import About from './views/About/About';
 
 const App = props => {

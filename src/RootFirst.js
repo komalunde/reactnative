@@ -1,9 +1,16 @@
 import React from 'react';
-import App from './App';
+import { Provider } from 'react-redux';
+import App from './AppFirst';
+
+import configureStore from './redux/configureStore'
 
 const Root = (props) => {
+  const store = configureStore();
+  
   return (
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   );
 }
 
