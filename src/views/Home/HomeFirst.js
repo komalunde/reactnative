@@ -12,7 +12,7 @@ const Home = (props) => {
 
 const mapStateToProps = state => {
   return {
-    currentTime: state.time.currentTime
+    currentTime: state.currentTime.currentTime
   }
 }
 

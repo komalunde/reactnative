@@ -6,7 +6,6 @@ import {
   Switch
 } from 'react-router-dom'
 
-
 import Home from './views/Home/HomeFirst';
 import About from './views/About/About';
 

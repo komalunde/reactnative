@@ -17,12 +17,12 @@ const Home = (props) => {
 
 const mapStateToProps = state => {
   return {
-    currentTime: state.time.currentTime
+    currentTime: state.currentTime.currentTime
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateTime: () => dispatch(fetchNewTime())
+  updateTime: (opts={}) => dispatch(fetchNewTime(opts))
 })
 
 export default connect(
