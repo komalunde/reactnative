@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+
 import Timeline from './components/Timeline/Timeline';
 
 export const load = () => {
@@ -9,4 +11,6 @@ export const load = () => {
 
 try {
   load();
-} catch (e) {}
+} catch (e) {
+  console.log(e);
+}
