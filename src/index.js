@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-import Timeline from './components/Timeline/Timeline';
+import Root from './Root';
 
 export const load = () => {
-  ReactDOM.render(<Timeline />, document.getElementById('demo1'));
+  ReactDOM.render(<Root />, document.getElementById('demo1'));
 };
 
 try {
