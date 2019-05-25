@@ -1,21 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Root from './Root';
+import Timeline from './components/Timeline/Timeline';
 
 export const load = () => {
-  ReactDOM.render(
-      <Root />,
-    document.getElementById('demo1')
-  );
-  ReactDOM.render(
-      <Root />,
-    document.getElementById('demo2')
-  );
+  ReactDOM.render(<Timeline />, document.getElementById('demo1'));
 };
 
 try {
   load();
-} catch (e) {
-  console.log(e);
-}
+} catch (e) {}
